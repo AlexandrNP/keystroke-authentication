@@ -107,20 +107,20 @@ std::vector<double> AnomalyDetector::getDeviation()
 }
 
 //------------------------------------------
-void AnomalyDetector::setMeans(std::vector<double>& means)
+void AnomalyDetector::setMeans(const std::vector<double>& means)
 {
 	m_means = means;
 }
 
 //------------------------------------------
-void AnomalyDetector::setDeviation(std::vector<double>& deviation)
+void AnomalyDetector::setDeviation(const std::vector<double>& deviation)
 {
 	m_deviation = deviation;
 }
 
 
 //------------------------------------------
-void AnomalyDetector::setThreshold(double threshold)
+void AnomalyDetector::setThreshold(const double threshold)
 {
 	m_threshold = threshold;
 }

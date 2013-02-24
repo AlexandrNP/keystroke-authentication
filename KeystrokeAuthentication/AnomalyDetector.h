@@ -11,9 +11,9 @@ class AnomalyDetector
 		AnomalyDetector(const std::vector<std::vector<double>>& trainData);
 		void train(const std::vector<std::vector<double>>& trainData);
 		bool isNormal(const std::vector<double>& data);
-		void setMeans(std::vector<double>& means);
-		void setDeviation(std::vector<double>& deviation);
-		void setThreshold(double threshold);
+		void setMeans(const std::vector<double>& means);
+		void setDeviation(const std::vector<double>& deviation);
+		void setThreshold(const double threshold);
 		std::vector<double> getMeans();
 		std::vector<double> getDeviation();
 		double getThreshold();

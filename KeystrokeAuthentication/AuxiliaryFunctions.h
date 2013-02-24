@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-double square(double value);
+double square(const double value);
 std::vector<double> mean(const std::vector<std::vector<double>>& trainData);
 std::vector<double> deviation(const std::vector<std::vector<double>>& trainData);
 void split(std::vector<std::wstring>& output, const std::wstring& input, const std::wstring& token = L" ");

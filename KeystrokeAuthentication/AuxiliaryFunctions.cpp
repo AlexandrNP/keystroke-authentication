@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <Shlwapi.h>
 
-double square(double value)
+double square(const double value)
 {
 	return value * value;
 }
