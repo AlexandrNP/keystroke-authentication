@@ -5,6 +5,11 @@
 #include <algorithm>
 #include <Shlwapi.h>
 
+double square(double value)
+{
+	return value * value;
+}
+
 std::vector<double> mean(const std::vector<std::vector<double>>& trainData)
 {
 	if(0 == trainData.size())
@@ -51,7 +56,7 @@ std::vector<double> deviation(const std::vector<std::vector<double>>& trainData)
 	{
 		for(unsigned int i = 0; i < deviations.size(); ++i)
 		{
-			deviations[i] += (vec[i] - means[i]) * (vec[i] - means[i]);
+			deviations[i] += square(vec[i] - means[i]);
 		}
 	});
 
