@@ -53,25 +53,17 @@ void AnomalyDetector::createThreshold(const std::vector<std::vector<double>>& tr
 {
 	m_threshold = 0;
 	double anomalyScore = 0;
-	double maxAlomalyScore = 0,
-		     secondAlomalyScore = 0;
 	for(auto it = trainData.cbegin(); it!= trainData.cend(); ++it)
 	{
 		anomalyScore = countAnomalyScore(*it);
 
-		if(anomalyScore > maxAlomalyScore)
+		if(anomalyScore > m_threshold)
 		{
-			maxAlomalyScore = anomalyScore;
-		}
-		else if (anomalyScore > secondAlomalyScore)
-		{
-			secondAlomalyScore = anomalyScore;
+			m_threshold = anomalyScore;
 		}
 
 		anomalyScore = 0;
 	}
-
-	m_threshold += (maxAlomalyScore + secondAlomalyScore) / 2;
 }
 
 
